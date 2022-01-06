@@ -94,6 +94,19 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Elixir
+  use "elixir-editors/vim-elixir"
+
+  -- hop.nvim
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1',
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
