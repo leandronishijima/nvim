@@ -61,7 +61,8 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim" -- Original theme from template
+  use "rmehri01/onenord.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -106,6 +107,10 @@ return packer.startup(function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
+
+  -- Symbols outline
+  use "simrat39/symbols-outline.nvim"
+  
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
