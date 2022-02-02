@@ -1,4 +1,4 @@
-# Neovim from scratch
+# Neovim 
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
@@ -8,7 +8,7 @@ Make sure to remove or move your current `nvim` directory
 
 **IMPORTANT** requires `Neovim 0.6 release` version
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/leandronishijima/nvim.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
