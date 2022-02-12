@@ -106,8 +106,6 @@ local mappings = {
     l = { "<cmd>HopLine<cr>", "Motion Line" },
   },
 
-  ["n"] = { "<cmd>noh<cr>", "Noh!" },
-
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
