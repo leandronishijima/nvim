@@ -98,6 +98,7 @@ return packer.startup(function(use)
 
   -- Elixir
   use "elixir-editors/vim-elixir"
+  use "sheerun/vim-polyglot"
 
   -- hop.nvim
   use {
