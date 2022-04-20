@@ -4,8 +4,7 @@ local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
+    "git", "clone",
     "--depth",
     "1",
     "https://github.com/wbthomason/packer.nvim",
@@ -109,8 +108,19 @@ return packer.startup(function(use)
     end
   }
 
-  -- Symbols outline
-  use "simrat39/symbols-outline.nvim"
+  use "simrat39/symbols-outline.nvim" -- Symbols outline
+
+  use "mg979/vim-visual-multi" --multi-cursor
+
+  -- Trouble
+  use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+    }
+  end
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

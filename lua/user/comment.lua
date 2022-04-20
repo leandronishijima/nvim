@@ -6,11 +6,11 @@ end
 comment.setup {
   toggler = {
     ---Line-comment toggle keymap
-    line = '/',
+    line = 'g/',
   },
   opleader = {
     ---Block-comment keymap
-    block = '//',
+    block = 'g//',
   },
   pre_hook = function(ctx)
     local U = require "Comment.utils"

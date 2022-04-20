@@ -172,6 +172,10 @@ local mappings = {
       "<cmd>SymbolsOutline<cr>",
       "Symbols Outline",
     },
+    t = {
+      "<cmd>Trouble<cr>",
+      "View Trouble",
+    },
   },
   s = {
     name = "Search",
@@ -190,7 +194,6 @@ local mappings = {
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     i = { "<cmd>lua _IEX_TOGGLE()<cr>", "Iex" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
