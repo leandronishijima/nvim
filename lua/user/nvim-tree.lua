@@ -26,7 +26,8 @@ if not status_ok then
   return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config") if not config_status_ok then
+local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+if not config_status_ok then
   return
 end
 
@@ -41,14 +42,10 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
+  --auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = true,
-  },
   diagnostics = {
     enable = true,
     icons = {
@@ -81,11 +78,11 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = true,
+    --auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
-        { key = { "l", "<CR>", "o" }, action =  "edit" },
+        { key = { "l", "<CR>", "o" }, action = "edit" },
         { key = "h", action = "close_node" },
         { key = "v", action = "vsplit" },
       },
@@ -97,15 +94,12 @@ nvim_tree.setup {
     cmd = "trash",
     require_confirm = true,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
+  actions = {
+    open_file = {
+      quit_on_open = false,
+    }
   },
+  --git_hl = 1,
+  --disable_window_picker = 0,
+  --root_folder_modifier = ":t",
 }
