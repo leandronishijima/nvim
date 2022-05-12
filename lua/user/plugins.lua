@@ -98,13 +98,16 @@ return packer.startup(function(use)
   use "elixir-editors/vim-elixir"
   use "sheerun/vim-polyglot"
 
+  -- Ruby
+  use "ngmy/vim-rubocop"
+
   -- hop.nvim
   use {
     'phaazon/hop.nvim',
     branch = 'v1',
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
-      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
 
@@ -114,13 +117,13 @@ return packer.startup(function(use)
 
   -- Trouble
   use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-    }
-  end
-}
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+      }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
