@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "RRethy/vim-illuminate"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -98,13 +99,16 @@ return packer.startup(function(use)
   use "elixir-editors/vim-elixir"
   use "sheerun/vim-polyglot"
 
+  -- Ruby
+  use "ngmy/vim-rubocop"
+
   -- hop.nvim
   use {
     'phaazon/hop.nvim',
     branch = 'v1',
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
-      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
 
@@ -114,13 +118,16 @@ return packer.startup(function(use)
 
   -- Trouble
   use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-    }
-  end
-}
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        mode = "document_diagnostics"
+      }
+    end
+  }
+
+  use "p00f/nvim-ts-rainbow"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
