@@ -1,5 +1,8 @@
 return {
 	settings = {
+		on_attach = function(client)
+			require 'illuminate'.on_attach(client)
+		end,
 
 		Lua = {
 			diagnostics = {
