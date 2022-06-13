@@ -24,13 +24,13 @@ local options = {
   expandtab = true, -- convert tabs to spaces
   shiftwidth = 2, -- the number of spaces inserted for each indentation
   tabstop = 2, -- insert 2 spaces for a tab
-  cursorline = false, -- highlight the current line
+  cursorline = true, -- highlight the current line
   number = true, -- set numbered lines
   relativenumber = true, -- set relative numbered lines
   numberwidth = 4, -- set number column width to 2 {default 4}
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   wrap = false, -- display lines as one long line
-  scrolloff = 10, -- is one of my fav
+  scrolloff = 20, -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17", -- the font used in graphical neovim applications
 }
@@ -44,5 +44,12 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd "set ignorecase"
+
+-- cursor configs
 vim.cmd "set guicursor=i:ver1"
 vim.cmd "set guicursor+=a:blinkon1"
+
+-- performance configs
+--vim.cmd "set lazyredraw"
+vim.cmd "set nosc noru nosm"
