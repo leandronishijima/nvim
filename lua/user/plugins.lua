@@ -101,6 +101,8 @@ return packer.startup(function(use)
 
   -- Ruby
   use "ngmy/vim-rubocop"
+  use 'vim-ruby/vim-ruby'
+  use 'tpope/vim-rails'
 
   -- hop.nvim
   use {
