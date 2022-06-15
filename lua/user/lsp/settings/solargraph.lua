@@ -3,7 +3,10 @@ return {
     solargraph = {
       commandPath = '/Users/leandronishijima/.asdf/shims/solargraph',
       diagnostics = true,
-      completion = true
+      completion = true,
+      flags = {
+        debounce_text_changes = 150
+      }
     }
   },
 }

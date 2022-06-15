@@ -19,7 +19,7 @@ local options = {
   -- termguicolors = true,                    -- set term gui colors (most terminals support this)
   timeoutlen = 100, -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true, -- enable persistent undo
-  updatetime = 300, -- faster completion (4000ms default)
+  updatetime = 100, -- faster completion (4000ms default)
   writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true, -- convert tabs to spaces
   shiftwidth = 2, -- the number of spaces inserted for each indentation
@@ -50,6 +50,6 @@ vim.cmd "set ignorecase"
 vim.cmd "set guicursor=i:ver1"
 vim.cmd "set guicursor+=a:blinkon1"
 
--- performance configs
---vim.cmd "set lazyredraw"
+--- performance configs
+vim.cmd "set lazyredraw"
 vim.cmd "set nosc noru nosm"
