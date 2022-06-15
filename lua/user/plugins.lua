@@ -97,7 +97,6 @@ return packer.startup(function(use)
 
   -- Elixir
   use "elixir-editors/vim-elixir"
-  use "sheerun/vim-polyglot"
 
   -- Ruby
   use "ngmy/vim-rubocop"
