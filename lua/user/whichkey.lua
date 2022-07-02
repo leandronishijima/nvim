@@ -86,6 +86,7 @@ local mappings = {
   },
   ["n"] = { "<cmd>enew<cr>", "New empty buffer" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["R"] = { "<cmd>NvimTreeRefresh<cr>", "Refresh NvimTree" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["r"] = { "<cmd>RuboCop<CR>", "RuboCop" },
