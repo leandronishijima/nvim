@@ -43,7 +43,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "<Esc>", ":noh<CR>", term_opts)
 
 -- global "go to definition (lsp)"
-keymap("n", "gd", "<CMD>vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
