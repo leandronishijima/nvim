@@ -5,5 +5,6 @@ end
 
 lspconfig.solargraph.setup(require "user.lsp.settings.solargraph")
 
-require "user.lsp.lsp-installer"
+require "user.lsp.configs"
 require("user.lsp.handlers").setup()
+require "user.lsp.null-ls"
