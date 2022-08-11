@@ -19,6 +19,16 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Delete a word backwards
+keymap("n", "dW", 'vb"_d', opts)
+
+-- Select All
+keymap("n", "<C-a>", "gg<S-v>G", opts)
+
+-- Split buffers
+keymap("n", "ss", ":split<Return><C-w>w", opts)
+keymap("n", "sv", ":vsplit<Return><C-w>w", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
