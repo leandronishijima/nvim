@@ -42,11 +42,6 @@ for _, server in pairs(servers) do
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
-	if server.name == "elixir-ls1" then
-		local elixirls_opts = require("user.lsp.settings.elixir_ls")
-		opts = vim.tbl_deep_extend("force", elixirls_opts, opts)
-	end
-
 	server = vim.split(server, "@")[1]
 
 	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)
