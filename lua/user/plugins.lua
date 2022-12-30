@@ -62,7 +62,8 @@ return packer.startup(function(use)
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "lunarvim/darkplus.nvim" -- Original theme from template
   -- use "rmehri01/onenord.nvim"
-  use "ayu-theme/ayu-vim"
+  -- use "ayu-theme/ayu-vim"
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -131,6 +132,13 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
 
   use "tpope/vim-endwise"
+
+  use {
+  "klen/nvim-test",
+  config = function()
+    require('nvim-test').setup()
+  end
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
