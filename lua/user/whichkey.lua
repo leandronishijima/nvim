@@ -89,7 +89,6 @@ local mappings = {
   ["R"] = { "<cmd>NvimTreeRefresh<cr>", "Refresh NvimTree" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["r"] = { "<cmd>RuboCop<CR>", "RuboCop" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
@@ -99,8 +98,8 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
   ["o"] = {
-    "<cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find tag",
+    "<cmd>lua require('telescope.builtin').git_files()<cr>",
+    "Find files",
   },
 
   m = {
