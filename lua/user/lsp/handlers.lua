@@ -14,8 +14,11 @@ M.setup = function()
   end
 
   local config = {
-    -- disable virtual text
-    virtual_text = false,
+    --virtual_text = false,
+    virtual_text = {
+      spacing = 4,
+      severity = vim.diagnostic.severity.ERROR
+    },
     -- show signs
     signs = {
       active = signs,
@@ -24,7 +27,7 @@ M.setup = function()
     underline = true,
     severity_sort = true,
     float = {
-      focusable = false,
+      focusable = true,
       style = "minimal",
       border = "rounded",
       source = "always",
