@@ -80,10 +80,6 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
-  },
   ["n"] = { "<cmd>enew<cr>", "New empty buffer" },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["R"] = { "<cmd>NvimTreeRefresh<cr>", "Refresh NvimTree" },
@@ -91,17 +87,14 @@ local mappings = {
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files()<cr>",
-    "Find files",
+  f = {
+    name = "[F]ind",
+    f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "[F]iles", },
+    g = { "<cmd>Telescope live_grep theme=ivy<cr>", "[G]rep", },
+    o = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "[o]n git files", },
+    b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "[B]uffers", },
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
-  ["o"] = {
-    "<cmd>lua require('telescope.builtin').git_files()<cr>",
-    "Find files",
-  },
-
   m = {
     name = "Move",
     w = { "<cmd>HopWord<cr>", "Motion Word" },
